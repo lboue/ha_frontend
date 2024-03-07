@@ -96,6 +96,18 @@ export class HaDeviceInfoMatter extends SubscribeMixin(LitElement) {
             )}</span
           >
         </div>
+        <div class="row">
+          <span class="name"
+            >${this.hass.localize(
+              "ui.panel.config.matter.device_info.node_serial"
+            )}:</span
+          >
+          <span class="value"
+            >${this.hass.localize(
+              `ui.panel.config.matter.node_serial.${this._nodeDiagnostics.node_serial}`
+            )}</span
+          >
+        </div>
         ${this._nodeDiagnostics.network_name
           ? html`
               <div class="row">
